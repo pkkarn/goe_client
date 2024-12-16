@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-black text-white m-0 p-0 font-sans;
+}
+
+@layer components {
+  .search-input {
+    @apply w-full px-4 py-2 rounded-md bg-black/50 border border-gray-800 text-white placeholder-gray-500;
+  }
+
+  .search-input:focus {
+    @apply outline-none border-gray-700;
+  }
+
+  .nav-button {
+    @apply w-10 h-10 border-2 border-app-green rounded-lg bg-transparent hover:bg-app-green/10 transition-colors;
+  }
+
+  .action-button {
+    @apply w-8 h-8 border-2 border-app-green rounded-full flex items-center justify-center hover:bg-app-green hover:text-black transition-colors;
+  }
+}
+
+@layer utilities {
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-app-dark;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded;
+  }
+}
